@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ocpViewController : UIViewController
+@interface ocpViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>{
+    UITextField *title;
+    UITextField *categories;
+    UITextView *question;
+}
+
+@property (nonatomic, retain) IBOutlet UITextField *title;
+@property (nonatomic, retain) IBOutlet UITextField *categories;
+@property (nonatomic, retain) IBOutlet UITextView *question;
+
+@property(nonatomic) NSMutableArray *capturedImages;
+
+-(IBAction)submitQuestion:(id)sender;
+//-(IBAction)attachPhoto:(id)sender;
 
 @end
