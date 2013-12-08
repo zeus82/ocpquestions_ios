@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface ocpViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>{
+@interface ocpViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, MFMailComposeViewControllerDelegate>{
     UITextField *title;
     UITextField *categories;
     UITextView *question;

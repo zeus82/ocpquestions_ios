@@ -54,7 +54,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="submitQuestion" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aIc-Zg-M4E"/>
+                                    <action selector="submitQuestion:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OYJ-1E-x4E"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T8Y-fW-Itm">
@@ -71,72 +71,27 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="k8E-0U-F65" kind="modal" id="cTx-s8-dHj"/>
+                                    <action selector="showImagePickerForCamera:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EDP-Dn-ilD"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wap-ST-KUA">
+                                <rect key="frame" x="40" y="388" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="54J-eY-Ax6"/>
                     <connections>
                         <outlet property="categories" destination="pEK-aJ-eu8" id="FTz-J4-lzb"/>
+                        <outlet property="imageView" destination="wap-ST-KUA" id="DB8-ez-dJe"/>
                         <outlet property="question" destination="T8Y-fW-Itm" id="ye5-2q-oJi"/>
                         <outlet property="title" destination="7aA-bj-KIP" id="WPZ-ra-WYI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="156" y="116"/>
-        </scene>
-        <!--Ocp Image Picker View Controller-->
-        <scene sceneID="ota-q0-nX9">
-            <objects>
-                <viewController id="k8E-0U-F65" userLabel="Ocp Image Picker View Controller" customClass="ocpImagePickerViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="WG6-hT-BIo"/>
-                        <viewControllerLayoutGuide type="bottom" id="tkJ-i9-2Bl"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KX5-Qc-JZr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5iv-SK-xa0">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Photos" id="BNJ-uE-C3S">
-                                        <connections>
-                                            <action selector="showImagePickerForPhotoPicker:" destination="k8E-0U-F65" id="NnX-FP-xxl"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="61" style="plain" systemItem="fixedSpace" id="0Zr-fE-0BY"/>
-                                    <barButtonItem title="Use" id="sbX-pJ-Ooa">
-                                        <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="modal" id="wEC-Vw-Mgm"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="64" style="plain" systemItem="fixedSpace" id="91B-aC-tGU"/>
-                                    <barButtonItem title="Camera" id="1PV-g2-92c">
-                                        <connections>
-                                            <action selector="showImagePickerForCamera:" destination="k8E-0U-F65" id="N9b-uz-Bl0"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rx0-U9-kEZ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="imageView" destination="rx0-U9-kEZ" id="ie3-17-nt9"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fRN-M7-iUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="555" y="116"/>
+            <point key="canvasLocation" x="158" y="149"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

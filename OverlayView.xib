@@ -4,11 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ocpImagePickerViewController">
-            <connections>
-                <outlet property="takePictureButton" destination="X9a-6y-vQ7" id="YQi-80-F8Y"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ocpImagePickerViewController"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="1">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -20,11 +16,7 @@
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     <items>
                         <barButtonItem width="84" style="plain" systemItem="fixedSpace" id="xq7-7p-c8E"/>
-                        <barButtonItem title="Take Photo" id="X9a-6y-vQ7">
-                            <connections>
-                                <action selector="takePhoto:" destination="-1" id="NdS-EO-DKp"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem title="Take Photo" id="X9a-6y-vQ7"/>
                     </items>
                 </toolbar>
             </subviews>

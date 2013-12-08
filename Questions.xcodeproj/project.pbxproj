@@ -23,9 +23,7 @@
 		1F19EE571853B633003C29A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F19EE551853B633003C29A4 /* InfoPlist.strings */; };
 		1F19EE591853B633003C29A4 /* QuestionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F19EE581853B633003C29A4 /* QuestionsTests.m */; };
 		1F1E5FE81853BFAC00061B97 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1E5FE71853BFAC00061B97 /* MessageUI.framework */; };
-		1FA57C6E1853D0A900FDAF56 /* ocpImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA57C6D1853D0A900FDAF56 /* ocpImagePickerViewController.m */; };
 		1FEF1ECF1853F058003DEB94 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FEF1ECE1853F058003DEB94 /* OverlayView.xib */; };
-		1FEF1ED218540163003DEB94 /* ocpQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF1ED118540163003DEB94 /* ocpQuestion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,11 +58,7 @@
 		1F19EE561853B633003C29A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1F19EE581853B633003C29A4 /* QuestionsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionsTests.m; sourceTree = "<group>"; };
 		1F1E5FE71853BFAC00061B97 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		1FA57C6C1853D0A900FDAF56 /* ocpImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ocpImagePickerViewController.h; sourceTree = "<group>"; };
-		1FA57C6D1853D0A900FDAF56 /* ocpImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ocpImagePickerViewController.m; sourceTree = "<group>"; };
 		1FEF1ECE1853F058003DEB94 /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OverlayView.xib; path = ../OverlayView.xib; sourceTree = "<group>"; };
-		1FEF1ED018540163003DEB94 /* ocpQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ocpQuestion.h; sourceTree = "<group>"; };
-		1FEF1ED118540163003DEB94 /* ocpQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ocpQuestion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,10 +129,6 @@
 				1F19EE431853B633003C29A4 /* ocpViewController.m */,
 				1F19EE451853B633003C29A4 /* Images.xcassets */,
 				1F19EE311853B633003C29A4 /* Supporting Files */,
-				1FA57C6C1853D0A900FDAF56 /* ocpImagePickerViewController.h */,
-				1FA57C6D1853D0A900FDAF56 /* ocpImagePickerViewController.m */,
-				1FEF1ED018540163003DEB94 /* ocpQuestion.h */,
-				1FEF1ED118540163003DEB94 /* ocpQuestion.m */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -278,8 +268,6 @@
 				1F19EE371853B633003C29A4 /* main.m in Sources */,
 				1F19EE3B1853B633003C29A4 /* ocpAppDelegate.m in Sources */,
 				1F19EE441853B633003C29A4 /* ocpViewController.m in Sources */,
-				1FA57C6E1853D0A900FDAF56 /* ocpImagePickerViewController.m in Sources */,
-				1FEF1ED218540163003DEB94 /* ocpQuestion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
