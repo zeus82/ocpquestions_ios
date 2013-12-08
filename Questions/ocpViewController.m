@@ -8,7 +8,6 @@
 
 #import "ocpViewController.h"
 
-
 @interface ocpViewController ()
 
 @property (nonatomic, weak) IBOutlet UIImageView *imageView;
@@ -24,7 +23,7 @@
 @end
 
 @implementation ocpViewController
-@synthesize title, categories, question;
+@synthesize title, categories, question1, question2, question3, question4;
 
 - (void)viewDidLoad
 {
@@ -39,15 +38,18 @@
 }
 
 
-
--(IBAction)submitQuestion:(id)sender
+-(void) emailQuestionWithLatitude:(double)latitue andLongitude:(double)longitude
 {
     // Email Subject
     NSString *emailTitle = title.text;
     // Email Content
     
     NSMutableString* body = [[NSMutableString alloc]init];
-    [body appendFormat:@"[category %@]\n\n %@", categories.text, question.text];
+    [body appendFormat:@"[category %@]\n\n", categories.text];
+    [body appendFormat:@"What it is: %@\n\n", question1.text];
+    [body appendFormat:@"What I know about it: %@\n\n", question2.text];
+    [body appendFormat:@"What I want to know about it: %@\n\n", question3.text];
+    [body appendFormat:@"What I want to do about it: %@\n\n", question4.text];
     
     NSString *messageBody = [NSString stringWithString:body];
     // To address
@@ -58,14 +60,33 @@
     [mc setSubject:emailTitle];
     [mc setMessageBody:messageBody isHTML:NO];
     [mc setToRecipients:toRecipents];
-
+    
     if ([self.capturedImages count] >0){
-        NSData *myData = UIImagePNGRepresentation(self.capturedImages[0]);
-        [mc addAttachmentData:myData mimeType:@"image/png" fileName:@"image.png"];
+        NSData *myData = UIImageJPEGRepresentation(self.capturedImages[0], 0.8);
+        [mc addAttachmentData:myData mimeType:@"image/jpg" fileName:@"image.jpg"];
     }
     
     // Present mail view controller on screen
     [self presentViewController:mc animated:YES completion:NULL];
+}
+
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    CLLocationCoordinate2D coordinate = [newLocation coordinate];
+    [self emailQuestionWithLatitude:coordinate.latitude andLongitude:coordinate.longitude];
+}
+
+
+-(IBAction)submitQuestion:(id)sender
+{
+    /*
+    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate=self;
+    locationManager.desiredAccuracy=kCLLocationAccuracyBestForNavigation;
+    [locationManager startUpdatingLocation];
+    */
+    [self emailQuestionWithLatitude:0.0 andLongitude:0.0];
 }
 
 
@@ -140,6 +161,15 @@
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
 {
+    
+    title.text = nil;
+    categories.text = nil;
+    question1.text = nil;
+    question2.text = nil;
+    question3.text = nil;
+    question4.text = nil;
+    
+    [self.capturedImages removeAllObjects];
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
